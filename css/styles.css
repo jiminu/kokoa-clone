@@ -5,12 +5,21 @@
 @import url(components/status-bar.css);
 @import url(components/nav-bar.css);
 @import url(components/screen-header.css);
+@import url(components/user-component.css);
+@import url(components/badge.css);
+@import url(components/icon-row.css);
 
 /* Screens */
-@import url(sreens/login.css);
-@import url(sreens/friends.css);
+@import url(screens/login.css);
+@import url(screens/friends.css);
+@import url(screens/find.css);
+@import url(screens/more.css);
 
 body {
     color : #2e363e;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main-screen {
+    padding: 0px var(--horizontal-space);
 }
