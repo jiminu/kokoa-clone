@@ -136,6 +136,7 @@
 
 .reply i {
   opacity: 0.5;
+  transition: transform .3s ease-in-out;
 }
 
 .reply .reply__column:last-child {
@@ -173,6 +174,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  transition: transform .3s ease-in-out;
 }
 
 .reply__column button i {
@@ -185,23 +187,26 @@
 }
 
 .reply .reply__column:first-child, 
-.reply .fa-smile-wink,
-.reply button {
+.reply .fa-smile-wink {
   transition: opacity .3s ease-in-out;
 }
 
 .reply:focus-within .reply__column:first-child, 
-.reply:focus-within .fa-smile-wink,
-.reply:focus-within button {
+.reply:focus-within .fa-smile-wink {
   opacity: 0;
-
 }
 
 .reply input:focus {
   width: 90vw;
-  transform: translateX(-12%) translateY(-80px);
+  transform: translateX(-12%);
 }
 
-.reply:focus-within {
+
+.reply:focus-within .reply__column:first-child, 
+.reply:focus-within .fa-smile-wink {
   transform: translateY(80px);
+}
+
+.reply:focus-within button {
+  transform: translateX(-40%);
 }
