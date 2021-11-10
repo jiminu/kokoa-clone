@@ -22,9 +22,49 @@
     position: absolute;
     left: 15px;
     bottom: 15px;
+    animation: notificationAnimation 1s ease-in-out infinite;
+}
+
+@keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(360deg);
+  }
+  100% {
+    transform: none;
+  }
 }
 
 .nav__dot {
     position: absolute;
     left: 30px;
+}
+
+@keyframes appearBtnAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform-origin: none;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+} 
+
+.nav__btn {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: appearBtnAnimation 0.3s ease-in-out forwards;
+}
+
+.nav__btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.nav__btn:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.nav__btn:last-child {
+  animation-delay: 0.6s;
 }
